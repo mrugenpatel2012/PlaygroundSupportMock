@@ -39,3 +39,12 @@ public class PlaygroundRemoteLiveViewProxy: PlaygroundRemoteLiveView {
         
     }
 }
+
+public protocol PlaygroundLiveViewSafeAreaContainer {
+  var liveViewSafeAreaGuide: UILayoutGuide { get }
+}
+
+public extension PlaygroundLiveViewSafeAreaContainer {
+  var liveViewSafeAreaGuide: UILayoutGuide { return UILayoutGuide()
+  }
+}
